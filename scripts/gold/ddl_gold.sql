@@ -62,7 +62,7 @@ ON pn.cat_id = pc.id
 WHERE pn.prd_end_dt IS NULL; -- Filter out all historical data
 
 IF OBJECT_ID('gold.fact_sales', 'V') IS NOT NULL
-DROP VIEW;
+	DROP VIEW;
 GO
 
 CREATE VIEW gold.fact_sales AS
