@@ -1,11 +1,16 @@
 /*
 ======================================================
-DDL Script: Create Bronze Tables
+DDL Script: Create Gold Views
 ======================================================
 Script purpose:
-		This script creates tables in the 'bronze' schema, dropping existing tables
+		This script creates views in the 'gold' schema, dropping existing views
 		if they already exist.
-		Run this script to re-define the DDL structure of 'bronze' tables.
+
+		Each view performes transformations and combines data from the Silver Layer
+		to produce clean, enriched and business-ready dataset.
+
+Usage:
+	- These views can be directly used for analytics and reporting.
 ======================================================
 */
 
@@ -30,11 +35,11 @@ SELECT
 	ci.cst_create_date AS create_date
 FROM silver.crm_cust_info AS ci
 LEFT JOIN silver.erp_cust_az12 AS ca
-ON		    ci.cst_key = ca.cid
+ON ci.cst_key = ca.cid
 LEFT JOIN silver.erp_loc_a101 AS la
-ON		    ci.cst_key = la.cid
+ON ci.cst_key = la.cid;
 
-IF OBJECT_ID('gold.dim_customers', 'V') IS NOT NULL
+IF OBJECT_ID('gold.dim_products', 'V') IS NOT NULL
 	DROP VIEW;
 GO
 	
@@ -53,10 +58,10 @@ SELECT
 	pn.prd_start_dt AS start_date
 FROM silver.crm_prd_info AS pn
 LEFT JOIN silver.erp_px_cat_g1v2 AS pc
-ON		    pn.cat_id = pc.id
+ON pn.cat_id = pc.id
 WHERE pn.prd_end_dt IS NULL; -- Filter out all historical data
 
-IF OBJECT_ID('gold.dim_customers', 'V') IS NOT NULL
+IF OBJECT_ID('gold.fact_sales', 'V') IS NOT NULL
 DROP VIEW;
 GO
 
@@ -73,6 +78,6 @@ SELECT
 	sd.sls_price AS price
 FROM silver.crm_sales_details AS sd
 LEFT JOIN gold.dim_products pr
-ON		    sd.sls_prd_key = pr.product_number
+ON sd.sls_prd_key = pr.product_number
 LEFT JOIN gold.dim_customers cu
-ON		    sd.sls_cust_id = cu.customer_id
+ON sd.sls_cust_id = cu.customer_id;
