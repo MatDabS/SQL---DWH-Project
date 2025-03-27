@@ -62,3 +62,7 @@ These insights empower stakeholders with key business metrics.
  - [GitHub](https://github.com/) - Repository to manage version and collaborate on the code.
 
 ## 🙋 About me
+My name is Mateusz Dąbrowski, and I hold a Bachelor's degree in Telecommunications and Computer Science. Below you can find the links to my profiles, feel free to browse or contact me!
+
+[![LinkedIn](https://img.icons8.com/?size=100&id=xuvGCOXi8Wyg&format=png&color=000000)](https://www.linkedin.com/in/mateusz-d%C4%85browski-7634b0205/) [![Tableau](https://img.icons8.com/?size=100&id=9Kvi1p1F0tUo&format=png&color=000000)](https://public.tableau.com/app/profile/mateusz.d.browski3656/vizzes)
+
