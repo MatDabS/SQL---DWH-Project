@@ -34,7 +34,23 @@ Second part demonstrates advanced techniques frequently used by professional dat
  - <strong>Gold Layer</strong>: Contains business-ready data modeled into star schema prepared for analysis. Data is stored in views.
  
 ## 📌 Project Requirements
+### Building the Data Warehouse (Data Engineering)
+<strong>Objective</strong>: Develop a modern data warehouse using SQL Server to consolidate data and prepare it for analytical reporting and infromed decision-making.
 
+<strong>Specifications</strong>:
+ - <strong>Data Sources</strong>: Import data from two source systems (CRM and ERP) provided as CSV files.
+ - <strong>Data Quality</strong>: Cleanse and normalize data resolving its quality issues prior to analysis.
+ - <strong>Integration</strong>: Combine both sources into single, user-friendly data model designed for analytical reporting.
+ - <strong>Scope</strong>: Focus on the latest dataset only, historization is not required.
+ - <strong>Documentation</strong>: Provide clear documentation of the data model to support further users of data warehouse.
+
+### BI: Analytics & Reporting (Data Analysis)
+<strong>Objective</strong>: Develop SQL-based analytics to deliver detailed insights about the business.
+ - <strong>Customer Behaviour</strong>
+ - <strong>Product Performance</strong>
+ - <strong>Sales Trends</strong>
+ 
+These insights empower stakeholders with key business metrics.
 
 ## 🗂️ Repository Structure
 
