@@ -53,6 +53,54 @@ Second part demonstrates advanced techniques frequently used by professional dat
 These insights empower stakeholders with key business metrics.
 
 ## 🗂️ Repository Structure
+```
+SQL---DataWarehouse/
+
+data_warehouse/
+│
+├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
+│
+├── docs/                               # Project documentation and architecture details
+│   ├── data_integration.drawio         # Draw.io file shows how the tables are related
+│   ├── data_architecture.drawio        # Draw.io file shows the project's architecture
+│   ├── data_architecture.png           # PNG file shows the project's architecture
+│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
+│   ├── data_flow_diagram.drawio        # Draw.io file for the data flow diagram
+│   ├── sales_data_mart.drawio          # Draw.io file for data models (star schema)
+│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
+│
+├── scripts/                            # SQL scripts for ETL and transformations
+│   ├── bronze/                         # Scripts for extracting and loading raw data
+│   ├── silver/                         # Scripts for cleaning and transforming data
+│   ├── gold/                           # Scripts for creating analytical models
+│   ├── init_database.sql               # Script for initialization of database
+│
+├── tests/                              # Test scripts and quality files
+
+data_analysis/
+│
+├── docs/                               # Project documentation and analysis details
+│   ├── data_analysis_roadmap.drawio    # Draw.io file shows particular steps of analysis
+│
+├── scripts/                            # SQL scripts for data analysis
+│   ├── ada_change_over_time.sql        # SQL script for change-over-time analysis
+│   ├── ada_cumulative_analysis.sql     # SQL script for cumulative analysis
+│   ├── ada_data_segmentation.sql       # SQL script for data segmentation
+│   ├── ada_part_to_whole_analysis.sql  # SQL script for part-to-whole analysis
+│   ├── ada_performance_analysis.sql    # SQL script for performance analysis
+│   ├── eda_database_exploration.sql    # SQL script for database exploration
+│   ├── eda_date_exploration.sql        # SQL script for date exploration
+│   ├── eda_dimensions_exploration.sql  # SQL script for dimensions exploration
+│   ├── eda_magnitude_analysis.sql      # SQL script for magnitude analysis
+│   ├── eda_measures_exploration.sql    # SQL script for measures exploration
+│   ├── eda_ranking_analysis.sql        # SQL script for ranking analysis
+│   ├── customers_report.sql            # SQL file for final customers report
+│   ├── products_report.sql             # SQL file for final products report
+
+README.md                               # Project overview and instructions
+
+```
+---
 
 ## ⚒️ Tools used in the Project
  - [SQL Server Express](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) - Lightweight server for hosting SQL database.
